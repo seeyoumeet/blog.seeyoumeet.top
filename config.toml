@@ -1,0 +1,20 @@
+baseURL = "/"
+languageCode = "zh-CN"
+title = "我的编程博客"
+theme = "PaperMod"
+defaultContentLanguage = "zh"
+enableEmoji = true
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+  enableKaTeX = true
+  enableCopyCode = true
+  enableToc = true
+  defaultTheme = "auto"
