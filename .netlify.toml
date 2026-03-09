@@ -1,6 +1,6 @@
 # 核心构建配置
 [build]
-  command = "hugo" 
+  command = "hugo --gc --minify" 
   publish = "public"
 
 # 强制指定 Hugo 版本和环境（关键解决 unknown 问题）
@@ -8,7 +8,5 @@
   HUGO_VERSION = "0.116.0"
   HUGO_EXTENDED = "true"
   HUGO_ENV = "production"
+  NETLIFY_USE_HUGO = "true"
 
-# 可选：强制安装 Hugo 依赖（兜底）
-[build.system]
-  shell = "bash"
