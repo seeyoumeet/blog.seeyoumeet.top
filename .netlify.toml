@@ -5,7 +5,7 @@
 
 # 强制指定 Hugo 版本和环境（关键解决 unknown 问题）
 [build.environment]
-  HUGO_VERSION = "0.116.0"
+  HUGO_VERSION = "0.146.0"
   HUGO_EXTENDED = "true"
   HUGO_ENV = "production"
   NETLIFY_USE_HUGO = "true"
