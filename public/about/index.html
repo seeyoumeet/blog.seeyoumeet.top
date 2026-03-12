@@ -5,21 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>快速排序算法推导 | 阿宇说</title>
+<title>关于我 | 阿宇说</title>
 <meta name="keywords" content="">
-<meta name="description" content="快速排序核心思想
-快速排序基于分治思想，时间复杂度 $O(n\log n)$。
-核心代码（Python）
-1def quick_sort(arr):
-2    if len(arr) &lt;= 1:
-3        return arr
-4    pivot = arr[0]
-5    left = [x for x in arr[1:] if x &lt;= pivot]
-6    right = [x for x in arr[1:] if x &gt; pivot]
-7    return quick_sort(left) &#43; [pivot] &#43; quick_sort(right)
-">
+<meta name="description" content="关于博客和我的一些说明">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/posts/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%8E%A8%E5%AF%BC/">
+<link rel="canonical" href="//localhost:1313/about/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
@@ -28,7 +18,7 @@
 <link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="//localhost:1313/posts/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%8E%A8%E5%AF%BC/">
+<link rel="alternate" hreflang="zh" href="//localhost:1313/about/">
 <noscript>
     <style>
         #theme-toggle,
@@ -138,7 +128,7 @@
             </li>
             <li>
                 <a href="//localhost:1313/about/" title="ℹ️ 关于">
-                    <span>ℹ️ 关于</span>
+                    <span class="active">ℹ️ 关于</span>
                 </a>
             </li>
         </ul>
@@ -150,42 +140,21 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      快速排序算法推导
+      关于我
     </h1>
-    <div class="post-meta"><span title='2026-02-09 10:00:00 +0800 CST'>2026年2月9日</span>
+    <div class="post-meta">
 
 </div>
-  </header> <div class="toc">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">目录</span>
-        </summary>
+  </header> 
 
-        <div class="inner"><ul>
-                <li>
-                    <a href="#%e5%bf%ab%e9%80%9f%e6%8e%92%e5%ba%8f%e6%a0%b8%e5%bf%83%e6%80%9d%e6%83%b3" aria-label="快速排序核心思想">快速排序核心思想</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b8%e5%bf%83%e4%bb%a3%e7%a0%81python" aria-label="核心代码（Python）">核心代码（Python）</a>
-                </li>
-            </ul>
-            </li>
-            </ul>
-        </div>
-    </details>
-</div>
+  <div class="post-content"><p>这里写你的个人简介，比如：</p>
+<ul>
+<li>博主：XXX</li>
+<li>专注领域：Go、前端、云计算</li>
+<li>联系方式：xxx@example.com</li>
+</ul>
+<p>支持 Markdown 格式，可自由排版。</p>
 
-  <div class="post-content"><h2 id="快速排序核心思想">快速排序核心思想<a hidden class="anchor" aria-hidden="true" href="#快速排序核心思想">#</a></h2>
-<p>快速排序基于分治思想，时间复杂度 $O(n\log n)$。</p>
-<h3 id="核心代码python">核心代码（Python）<a hidden class="anchor" aria-hidden="true" href="#核心代码python">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1</a></span><span><span style="color:#cf222e">def</span> <span style="color:#6639ba">quick_sort</span><span style="color:#1f2328">(</span>arr<span style="color:#1f2328">):</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2</a></span><span>    <span style="color:#cf222e">if</span> <span style="color:#6639ba">len</span><span style="color:#1f2328">(</span>arr<span style="color:#1f2328">)</span> <span style="color:#0550ae">&lt;=</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">:</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3</a></span><span>        <span style="color:#cf222e">return</span> arr
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4</a></span><span>    pivot <span style="color:#0550ae">=</span> arr<span style="color:#1f2328">[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5</a></span><span>    left <span style="color:#0550ae">=</span> <span style="color:#1f2328">[</span>x <span style="color:#cf222e">for</span> x <span style="color:#0550ae">in</span> arr<span style="color:#1f2328">[</span><span style="color:#0550ae">1</span><span style="color:#1f2328">:]</span> <span style="color:#cf222e">if</span> x <span style="color:#0550ae">&lt;=</span> pivot<span style="color:#1f2328">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6</a></span><span>    right <span style="color:#0550ae">=</span> <span style="color:#1f2328">[</span>x <span style="color:#cf222e">for</span> x <span style="color:#0550ae">in</span> arr<span style="color:#1f2328">[</span><span style="color:#0550ae">1</span><span style="color:#1f2328">:]</span> <span style="color:#cf222e">if</span> x <span style="color:#0550ae">&gt;</span> pivot<span style="color:#1f2328">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7">7</a></span><span>    <span style="color:#cf222e">return</span> quick_sort<span style="color:#1f2328">(</span>left<span style="color:#1f2328">)</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">[</span>pivot<span style="color:#1f2328">]</span> <span style="color:#0550ae">+</span> quick_sort<span style="color:#1f2328">(</span>right<span style="color:#1f2328">)</span>
-</span></span></code></pre></div>
 
   </div>
 
